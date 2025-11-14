@@ -1,41 +1,9 @@
-# 기본 데이터 처리
-pandas
-numpy
-
-# 주식 데이터 수집 (무료)
-yfinance
-pykrx
-ccxt
-
-# 기술적 분석 지표
-pandas-ta
-ta
-
-# 머신러닝
-scikit-learn
-scipy
-
-# 웹 대시보드
 streamlit
+yfinance
+pandas
 plotly
-
-# 데이터 시각화
-matplotlib
-
-# API 요청
 requests
-
-# 날짜/시간 처리
-pytz
-
-# 웹 스크래핑 (SEC 데이터 수집용)
-beautifulsoup4
-lxml
-
-# 설정 파일 관리
 pyyaml
 python-dotenv
-
-# 유틸리티
-tqdm
-python-dateutil
+beautifulsoup4
+lxml
