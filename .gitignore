@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+
+# Streamlit
+.streamlit/secrets.toml
+
+# 데이터
+*.csv
+*.xlsx
+*.db
+
+# 설정
+config/secrets.yaml
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# 로그
+*.log
+
+# 캐시
+.cache/

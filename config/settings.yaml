@@ -1,0 +1,97 @@
+# 시장 설정
+MARKETS:
+  - korea
+  - usa
+  - crypto
+
+# 한국 주식
+KOREA:
+  exchange: "KRX"
+  timezone: "Asia/Seoul"
+
+# 미국 주식
+USA:
+  exchanges:
+    - "NYSE"
+    - "NASDAQ"
+  timezone: "America/New_York"
+
+# 암호화폐
+CRYPTO:
+  exchange: "bybit"
+  timezone: "UTC"
+  symbols:
+    - "BTC/USDT"
+    - "ETH/USDT"
+
+# 데이터 업데이트 주기
+UPDATE_INTERVALS:
+  stock_finder: "1d"
+  trade_timing: "5m"
+  liquidity: "1w"
+
+# 알림 설정
+NOTIFICATIONS:
+  enabled: true
+  methods:
+    - console
+
+# 로그 설정
+LOGGING:
+  level: "INFO"
+  save_to_file: true
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# 🆕 5단계 추가 설정 (2025-11-13)
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# 데이터 수집 설정
+DATA:
+  default_tickers:
+    - "005930.KS"  # 삼성전자
+    - "AAPL"       # Apple
+    - "BTC-USD"    # Bitcoin
+  
+  periods:
+    - "1mo"
+    - "3mo"
+    - "6mo"
+    - "1y"
+    - "2y"
+  
+  cache_enabled: true
+  cache_ttl_minutes: 30
+
+# 기술적 분석 설정
+TECHNICAL:
+  rsi:
+    period: 14
+    overbought: 70
+    oversold: 30
+  
+  macd:
+    fast: 12
+    slow: 26
+    signal: 9
+  
+  moving_averages:
+    - 20
+    - 60
+    - 120
+
+# 종목 발굴 설정 (5단계 - 임원 매수 추적)
+SCREENER:
+  insider:
+    lookback_months: 3        # 조회 기간 (개월)
+    min_transactions: 2       # 최소 거래 횟수
+    min_value_usd: 100000     # 최소 거래 금액 ($100k)
+  
+  analyst:
+    min_upgrades: 2           # 최소 상향 횟수
+    min_upside_percent: 10    # 최소 상승 여력 (%)
+
+# 대시보드 설정
+DASHBOARD:
+  port: 8501
+  theme: "dark"
+  refresh_interval_sec: 300
